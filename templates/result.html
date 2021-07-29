@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<h1 style="font-family: 'Times New Roman', Times, serif;font-size:60px; text-align: center;"><b><span style="background-color:black"></span>Sentiment Analysis For Airline Tweets</span></b></h1>
+		
+	{% if prediction == [0]%}
+	<p class="aligncenter" style="text-align:center;">
+		<img src="static/neg.png" class="center" style="width:650px;height:450px;">
+    </p>
+	<h2 style="color:red; text-align: center; background-color: aliceblue; font-size: 3em;">Oops! The sentiment of your input is negative</h2>
+	{% elif prediction == [1]%}
+	<p class="aligncenter" style="text-align:center;">
+		<img src="static/neutral.png" class="center" style="width:600px;height:450px;">
+    </p>
+	<h2 style="color:blue; text-align: center; background-color: aliceblue; font-size: 3em;">The sentiment of your input is neutral</h2>
+    {% elif prediction == [2]%}
+	<p class="aligncenter" style="text-align:center;">
+		<img src="static/positive.png" class="center" style="width:750px;height:450px;">
+    </p>
+	<h2 style="color:green; text-align: center; background-color: aliceblue;font-size: 3em;">Yay! The sentiment of your input is positive</h2>
+	{% endif %}
+
+
+	<style>
+		body {background-image : url("static/bgtwtr.jpg");background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover; color :white; }
+	   </style>
+
+</body>
+</html>
