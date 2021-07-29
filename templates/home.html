@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter Sentiment Analysis</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+	<h1 style="font-family: 'Times New Roman', Times, serif;font-size:60px; text-align: center;"><b><span style="background-color:black"></span>Sentiment Analysis For Airline Tweets</span></b></h1>
+		
+	<!-- <div class="ml-container" align="center"> -->
+	
+	<!-- div class="input-group" style="width:50%;margin:35em;"> -->
+	
+		
+		<h1 style="font-family: 'Times New Roman', Times, serif;font-size:30px; margin-left: 41%;">Enter Your Text Here</h1>
+		<!-- <input type="text" name="comment"/> -->
+		
+		<form action="{{ url_for('predict')}}" method="POST">
+		<textarea name="text" rows="4" cols="50" margin:50em style="font-size: 15pt; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"></textarea>
+	    
+		
+		<br>
+		<br>
+
+		<input type="submit" class="btn-info" value="PREDICT" style="margin-left: 0.5%; height: 35px; width: 120px">
+	    </form>
+	
+	
+	<style>
+		body {background-image : url("static/bgtwtr.jpg");background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover; color :white; }
+	   </style>
+	
+	<!-- </div> -->
+
+</body>
+</html>
